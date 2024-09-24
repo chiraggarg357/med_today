@@ -57,7 +57,7 @@ jobs:
           sudo medusa new . --skip-db
 
           # Update the .env file to connect to the correct PostgreSQL database
-          echo "DATABASE_URL=postgres://chirag:chirag@localhost:5432/medusa" | sudo tee .env
+          echo "DATABASE_URL=postgres://medusa:medusa@localhost:5432/medusa" | sudo tee .env
           sudo chown $USER:$USER .env && chmod 644 .env
           
           # run migrations
